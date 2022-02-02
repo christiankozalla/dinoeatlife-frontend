@@ -11,17 +11,32 @@
           <ion-title size="large">Tab 1</ion-title>
         </ion-toolbar>
       </ion-header>
-    
-      <ExploreContainer name="Tab 1 page" />
+
+      Overview
+      <ul>
+        <li>Recipes</li>
+        <li>Ingredients</li>
+      </ul>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+import {
+  IonPage,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+} from "@ionic/vue";
 
-export default  {
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
-}
+export default {
+  components: {
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonPage,
+  },
+};
 </script>
