@@ -2,26 +2,67 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Tab 2</ion-title>
+        <ion-title>Recipes</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Tab 2</ion-title>
+          <ion-title size="large">Recipes</ion-title>
         </ion-toolbar>
       </ion-header>
-      
-      <ExploreContainer name="Tab 2 page" />
+
+      <!-- Recipes -->
+      <RecipeList />
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+import { defineComponent } from "vue";
+import {
+  IonPage,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+} from "@ionic/vue";
+import RecipeList from "../components/RecipeList.vue";
 
-export default  {
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
-}
+export default defineComponent({
+  components: {
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonPage,
+    RecipeList,
+  },
+  // setup() {
+  //   const currentIngredient = ref({ name: "", amount: "" });
+  //   const recipe = reactive({
+  //     name: "",
+  //     body: "",
+  //     ingredients: [] as [string, string][],
+  //   });
+
+  //   const toLocalStorage = () => {
+  //     localStorage.setItem(RecipeStorageItemName, JSON.stringify(recipe));
+  //   };
+
+  //   const pushCurrentIngredient = () => {
+  //     if (currentIngredient.value.name && currentIngredient.value.amount) {
+  //       const newIngredient = [
+  //         currentIngredient.value.name,
+  //         currentIngredient.value.amount,
+  //       ] as [string, string];
+  //       recipe.ingredients.push(newIngredient);
+  //       currentIngredient.value = { name: "", amount: "" };
+  //       toLocalStorage();
+  //     }
+  //   };
+
+  //   return { recipe, toLocalStorage, currentIngredient, pushCurrentIngredient };
+  // },
+});
 </script>
