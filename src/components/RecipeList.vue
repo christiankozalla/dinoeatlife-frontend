@@ -1,5 +1,5 @@
 <template>
-  <h2>Create a new Recipe</h2>
+  <h3 class="ion-margin-start">Create Recipe</h3>
   <ion-grid>
     <ion-row>
       <ion-col>
